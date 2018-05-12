@@ -42,6 +42,10 @@ h2 {
   font-size: 2em;
 }
 
+.or {
+  font-size: 2em;
+}
+
 hr {
   margin: $padding;
   border: 0;

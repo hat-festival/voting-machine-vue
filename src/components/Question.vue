@@ -19,7 +19,7 @@
       <div
         class='column'
         >
-        or
+        <span class='or'>or</span>
       </div>
       <div
         class='column'
