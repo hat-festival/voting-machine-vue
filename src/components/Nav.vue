@@ -3,6 +3,7 @@
     <a
       class='toggle small-disc'
       v-on:click='show = !show'
+      v-on-click-outside='close'
       >
       <icon name='bars'></icon>
     </a>
@@ -32,12 +33,18 @@
 </template>
 
 <script>
+import { mixin as onClickOutside } from 'vue-on-click-outside'
+
 export default {
   name: 'Nav',
+  mixins: [onClickOutside],
   data () {
     return {
       show: false
     }
+  },
+  methods: {
+    close () { this.show = false }
   }
 }
 </script>
