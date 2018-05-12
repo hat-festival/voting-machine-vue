@@ -1,7 +1,7 @@
 {
-  "name": "voting-machine-vue",
+  "name": "voting-machine",
   "version": "1.0.0",
-  "description": "Voting Machine front-end",
+  "description": "A Vue.js project",
   "author": "pikesley <sam.pikesley@gmail.com>",
   "private": true,
   "scripts": {
@@ -14,7 +14,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "buefy": "^0.6.5",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
     "vue": "^2.5.2",
+    "vue-awesome": "^3.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
