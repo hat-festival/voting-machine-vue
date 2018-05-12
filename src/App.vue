@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './src/assets/sass/variables';
+@import 'src/assets/sass/variables';
 
 html {
   background-color: $secondary;
