@@ -4,7 +4,7 @@ import Buefy from 'buefy'
 import 'buefy/lib/buefy.css'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
-
+import { directive as onClickOutside } from 'vue-on-click-outside'
 import App from './App'
 import Question from './components/Question'
 import About from './components/About'
@@ -13,6 +13,7 @@ Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
 
 Vue.component('icon', Icon)
+Vue.directive('on-click-outside', onClickOutside)
 
 const routes = [
   {
