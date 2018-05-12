@@ -43,7 +43,10 @@ export default {
   name: 'Question',
   data () {
     return {
-      question: null
+      question: {
+        premise: '',
+        options: []
+      }
     }
   },
   mounted () {
