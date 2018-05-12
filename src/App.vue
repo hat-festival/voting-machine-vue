@@ -31,6 +31,7 @@ body {
   margin: auto;
   text-align: center;
   color: $primary;
+  overflow: hidden;
 }
 
 h1 {
