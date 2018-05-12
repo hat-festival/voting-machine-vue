@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './src/assets/sass/variables';
+@import 'src/assets/sass/variables';
 
 html {
   background-color: $secondary;
@@ -31,6 +31,7 @@ body {
   margin: auto;
   text-align: center;
   color: $primary;
+  overflow: hidden;
 }
 
 h1 {
@@ -38,6 +39,10 @@ h1 {
 }
 
 h2 {
+  font-size: 2em;
+}
+
+.or {
   font-size: 2em;
 }
 
