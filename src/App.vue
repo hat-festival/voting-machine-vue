@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <app-nav></app-nav>
+  <div id='app'>
+    <Nav></Nav>
     <h1>Voting Machine</h1>
     <hr>
     <router-view></router-view>
@@ -13,12 +13,12 @@ import Nav from './components/Nav'
 export default {
   name: 'App',
   components: {
-    'app-nav': Nav
+    Nav
   }
 }
 </script>
 
-<style lang="scss">
+<style lang='scss'>
 @import 'src/assets/sass/variables';
 
 html {

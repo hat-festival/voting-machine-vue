@@ -1,0 +1,26 @@
+<template>
+  <div>
+    <a class='disc' v-on:click='vote(index)'>
+      <slot></slot>
+    </a>
+  </div>
+</template>
+
+<script>
+import axios from 'axios'
+
+var endPoint = 'http://localhost:9292/questions/horses-ducks'
+export default {
+  name: 'Button',
+  props: [
+    'index'
+  ],
+  methods: {
+    vote (choice) {
+      axios.post(endPoint, {
+        choice: choice
+      })
+    }
+  }
+}
+</script>

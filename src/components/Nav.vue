@@ -1,29 +1,17 @@
 <template>
   <div id='nav'>
-    <a
-      class='toggle small-disc'
-      v-on:click='show = !show'
-      v-on-click-outside='close'
-      >
+    <a class='toggle small-disc' v-on:click='show = !show' v-on-click-outside='close'>
       <icon name='bars'></icon>
     </a>
     <transition name='fade'>
-      <ul
-        class='nav flex-column'
-        id='nav'
-        v-if='show'
-        >
+      <ul class='nav' id='nav' v-if='show'>
         <li>
-          <router-link
-            v-bind:to="'/'"
-            >
+          <router-link v-bind:to="'/'">
             Question
           </router-link>
         </li>
         <li>
-          <router-link
-            v-bind:to="'/about'"
-            >
+          <router-link v-bind:to="'/about'">
             About
           </router-link>
         </li>
