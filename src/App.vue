@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang='scss'>
-@import 'src/assets/sass/variables';
+@import 'src/assets/sass/bulma-core';
 
 html {
   background-color: $secondary;
@@ -78,55 +78,5 @@ hr {
   @extend .disc;
   width: $btn-diameter * 0.1;
   height: $btn-diameter * 0.1;
-}
-
-.nav {
-  text-align: right;
-  position: fixed;
-  top: $padding;
-  right: $padding * 10;
-  padding-left: $padding;
-  background-color: $secondary;
-  opacity: 0.7;
-  padding-right: $padding;
-  z-index: 99;
-
-  li {
-    a {
-      font-size: 2em;
-      padding: 0;
-      margin: 0;
-      color: $primary;
-      transition: color $hover-transition-time $hover-transition-type;
-
-      &:hover {
-        text-decoration: none;
-        color: darken($primary, 10%);
-      }
-    }
-  }
-}
-
-.toggle {
-  font-size: 1.5em;
-  cursor: pointer;
-  z-index: 99;
-  transition: color $hover-transition-time $hover-transition-type;
-  position: fixed;
-  top: $padding * 3;
-  right: $padding * 4;
-  color: $secondary;
-
-  &:hover {
-    color: darken($primary, 10%);
-    color: darken($secondary, 10%);
-  }
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 </style>
