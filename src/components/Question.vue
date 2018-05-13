@@ -37,7 +37,6 @@
 
 <script>
 import axios from 'axios'
-import $ from 'jquery'
 var endPoint = 'http://localhost:9292/questions/horses-ducks'
 export default {
   name: 'Question',
@@ -61,20 +60,6 @@ export default {
       axios.post(endPoint, {
         choice: choice
       })
-    },
-    divide: function (value) {
-      var divided = []
-      var buffer = ''
-      $.each(value.split(' '), function (index, word) {
-        if ((buffer.length + word.length) > 12) {
-          divided.push(buffer)
-          buffer = word
-        } else {
-          buffer += `${word} `
-        }
-      })
-      divided.push(buffer)
-      return divided.join('<br>')
     }
   }
 }
