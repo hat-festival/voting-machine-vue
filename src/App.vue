@@ -52,31 +52,4 @@ hr {
   height: 1px;
   background-image: linear-gradient(to right, $secondary, $primary, $secondary);
 }
-
-.disc {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  width: $btn-diameter;
-  height:$btn-diameter;
-  border: 2px solid #f5f5f5;
-  border-radius: 50%;
-  color: $secondary;
-  text-decoration:none;
-  background: $primary;
-  font-size:2.5em;
-  font-weight: bold;
-  margin: auto;
-  transition: background-color $hover-transition-time $hover-transition-type;
-  &:hover {
-    background-color: darken($primary, 10%);
-    color: darken($secondary, 10%);
-  }
-}
-
-.small-disc {
-  @extend .disc;
-  width: $btn-diameter * 0.1;
-  height: $btn-diameter * 0.1;
-}
 </style>
