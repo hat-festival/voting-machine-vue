@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <a class='disc' v-on:click='vote(index)'>
+  <div class='shake-triggger'>
+    <a class='disc shake-little shake-constant' v-on:click='vote(index)'>
       <slot></slot>
     </a>
   </div>
