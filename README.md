@@ -4,13 +4,13 @@
 
 Since the dawn of history, one question has troubled the minds of the greatest thinkers: Would you rather fight one hundred duck-sized horses, or one horse-sized duck?
 
-We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far to many layers:
+We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far too many layers:
 
 ---
 
 ### REST API
 
-There's a simple [Sinatra](//sinatrarb.com/) [JSON API](//github.com/hat-festival/voting-machine) which exposes a `GET` endpoint for the question data, and a `POST` endpoint which shovels the votes onto a [Sidekiq](//sidekiq.org/) queue. Sidekiq requires [Redis](//redis.io/), and the easiest way to run a Redis server is using
+There's a simple [Sinatra](//sinatrarb.com/) [JSON API](//github.com/hat-festival/voting-machine) which exposes a `GET` endpoint for the question data, and a `POST` endpoint which collects the votes and shovels them onto a [Sidekiq](//sidekiq.org/) queue. Sidekiq requires [Redis](//redis.io/), and the easiest way to run a Redis server is using
 
 ---
 
@@ -31,6 +31,8 @@ We've not actually implemented this yet but we are planning an ICO for later in 
 ### Bothan
 
 When we worked at the [Open Data Institute](//theodi.org), we built a tool called [Bothan](//bothan.io). This is the obvious choice for visualising the votes stored in the Blockchain
+
+This requires [MongoDB](//mongodb.com), which will also be run in a Docker container
 
 ---
 
