@@ -3,7 +3,9 @@
     <Nav></Nav>
     <h1>Voting Machine</h1>
     <hr>
-    <router-view></router-view>
+    <transition name='fade'>
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -51,5 +53,12 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, $secondary, $primary, $secondary);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
