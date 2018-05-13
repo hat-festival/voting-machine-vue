@@ -30,7 +30,7 @@ body {
   width: 90%;
   margin: auto;
   text-align: center;
-  // color: $primary;
+  color: $primary;
   overflow: hidden;
 }
 

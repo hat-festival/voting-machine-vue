@@ -57,6 +57,7 @@ export default {
       padding: 0;
       margin: 0;
       color: $primary;
+      text-decoration: none;
       transition: color $hover-transition-time $hover-transition-type;
 
       &:hover {

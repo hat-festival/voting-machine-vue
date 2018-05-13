@@ -1,7 +1,10 @@
+@import url('//fonts.googleapis.com/css?family=Amatic+SC');
+
 $ecru: rgb(243, 239, 224);
 $secondary: $ecru;
 $red: rgb(244, 66, 66);
 $primary: $red;
+$link-colour: darken($primary, 20%);
 
 $btn-diameter: 300px;
 $hover-transition-time: 0.5s;
