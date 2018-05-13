@@ -1,20 +1,11 @@
-// Import Bulma's core
-@import "~bulma/sass/utilities/_all";
-@import url('//fonts.googleapis.com/css?family=Amatic+SC');
-
 $ecru: rgb(243, 239, 224);
 $secondary: $ecru;
 $red: rgb(244, 66, 66);
 $primary: $red;
-$link-colour: $ecru;
 
 $btn-diameter: 300px;
-$opacity: 0.8;
 $hover-transition-time: 0.5s;
 $hover-transition-type: ease;
 
 $footer-height: 40px;
 $padding: 5px;
-
-@import "~bulma";
-@import "~buefy/src/scss/buefy";
