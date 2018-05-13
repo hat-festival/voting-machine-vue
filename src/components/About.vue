@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang='scss'>
-@import 'src/assets/sass/variables';
+@import 'src/assets/sass/custom';
 @import url('//fonts.googleapis.com/css?family=Share+Tech+Mono');
 
 h3 {

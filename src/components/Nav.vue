@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style lang='scss'>
-@import 'src/assets/sass/variables';
+@import 'src/assets/sass/custom';
 
 .nav {
   text-align: right;
@@ -89,5 +89,11 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+.small-disc {
+  @include disc();
+  width: $btn-diameter * 0.1;
+  height: $btn-diameter * 0.1;
 }
 </style>
