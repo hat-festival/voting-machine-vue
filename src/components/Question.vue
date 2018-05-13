@@ -1,7 +1,5 @@
 <template>
-  <div
-    id='question'
-    >
+  <div id='question'>
     <h2>{{ question.premise }}</h2>
     <div class='columns is-vcentered'>
       <div class='column'>
