@@ -3,33 +3,15 @@
     id='question'
     >
     <h2>{{ question.premise }}</h2>
-    <div
-      class='columns is-vcentered'
-      >
-      <div
-        class='column'
-        >
-        <a
-          class='disc'
-          v-on:click='vote(0)'
-          >
-          {{ question.options[0] }}
-        </a>
+    <div class='columns is-vcentered'>
+      <div class='column'>
+        <Button index='0'>{{ question.options[0] }}</Button>
       </div>
-      <div
-        class='column'
-        >
+      <div class='column'>
         <span class='or'>or</span>
       </div>
-      <div
-        class='column'
-        >
-        <a
-          class='disc'
-          v-on:click='vote(1)'
-          >
-          {{ question.options[1] }}
-        </a>
+      <div class='column'>
+        <Button index='1'>{{ question.options[1] }}</Button>
       </div>
     </div>
   </div>
@@ -37,9 +19,14 @@
 
 <script>
 import axios from 'axios'
+import Button from './Button'
+
 var endPoint = 'http://localhost:9292/questions/horses-ducks'
 export default {
   name: 'Question',
+  components: {
+    Button
+  },
   data () {
     return {
       question: {
