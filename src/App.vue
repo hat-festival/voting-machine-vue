@@ -3,7 +3,7 @@
     <Nav></Nav>
     <h1>Voting Machine</h1>
     <hr>
-    <transition name='fade'>
+    <transition name='page' mode='out-in'>
       <router-view></router-view>
     </transition>
   </div>
@@ -61,4 +61,13 @@ hr {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
+.page-enter-active, .page-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  transform: translateZ(-20%);
+}
+
 </style>
