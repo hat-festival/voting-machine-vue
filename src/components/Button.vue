@@ -9,7 +9,7 @@
 <script>
 import axios from 'axios'
 
-var endPoint = 'http://localhost:9292/questions/horses-ducks'
+var endPoint = 'http://localhost:9292/vote'
 export default {
   name: 'Button',
   props: [

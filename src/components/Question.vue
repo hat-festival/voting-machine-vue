@@ -19,7 +19,7 @@
 import axios from 'axios'
 import Button from './Button'
 
-var endPoint = 'http://localhost:9292/questions/horses-ducks'
+var endPoint = 'http://localhost:9292/question'
 export default {
   name: 'Question',
   components: {
@@ -28,8 +28,11 @@ export default {
   data () {
     return {
       question: {
-        premise: '',
-        options: []
+        premise: 'Would you rather fight',
+        options: [
+          'One hundred duck-sized horses?',
+          'One horse-sized duck?'
+        ]
       }
     }
   },
