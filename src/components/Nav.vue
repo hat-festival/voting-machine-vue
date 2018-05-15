@@ -1,8 +1,6 @@
 <template>
-  <div id='nav'>
-    <a class='toggle small-disc' v-on:click='show = !show' v-on-click-outside='close'>
-      <icon name='bars'></icon>
-    </a>
+  <div>
+    <Toggle class='nav-toggle' :toggle='toggleNav' :close='closeNav'></Toggle>
     <transition name='fade'>
       <ul class='nav' id='nav' v-if='show'>
         <li>
@@ -21,18 +19,25 @@
 </template>
 
 <script>
-import { mixin as onClickOutside } from 'vue-on-click-outside'
+import Toggle from './Toggle'
 
 export default {
   name: 'Nav',
-  mixins: [onClickOutside],
+  components: {
+    Toggle
+  },
   data () {
     return {
       show: false
     }
   },
   methods: {
-    close () { this.show = false }
+    toggleNav () {
+      this.show = !this.show
+    },
+    closeNav () {
+      this.show = false
+    }
   }
 }
 </script>
@@ -41,47 +46,14 @@ export default {
 @import 'src/assets/sass/custom';
 
 .nav {
-  text-align: right;
-  position: fixed;
-  top: $padding;
+  @include nav();
   right: $padding * 10;
-  padding-left: $padding;
-  background-color: $secondary;
-  opacity: 0.7;
-  padding-right: $padding;
-  z-index: 99;
-
-  li {
-    a {
-      font-size: 2em;
-      padding: 0;
-      margin: 0;
-      color: $primary;
-      text-decoration: none;
-      transition: color $hover-transition-time $hover-transition-type;
-
-      &:hover {
-        text-decoration: none;
-        color: darken($primary, 10%);
-      }
-    }
-  }
+  text-align: right;
 }
 
-.toggle {
-  font-size: 1.5em;
-  cursor: pointer;
-  z-index: 99;
-  transition: color $hover-transition-time $hover-transition-type;
-  position: fixed;
-  top: $padding * 3;
+.nav-toggle {
+  @include toggle();
   right: $padding * 4;
-  color: $secondary;
-
-  &:hover {
-    color: darken($primary, 10%);
-    color: darken($secondary, 10%);
-  }
 }
 
 .fade-enter-active, .fade-leave-active {

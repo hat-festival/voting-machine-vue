@@ -18,3 +18,58 @@
     color: darken($secondary, 10%);
   }
 }
+
+@mixin small-disc() {
+  @include disc();
+  width: $btn-diameter * 0.1;
+  height: $btn-diameter * 0.1;
+}
+
+@mixin toggle() {
+  @include small-disc();
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 99;
+  transition: color $hover-transition-time $hover-transition-type;
+  position: fixed;
+  top: $padding * 3;
+  color: $secondary;
+
+  &:hover {
+    color: darken($primary, 10%);
+  }
+
+  a {
+    color: $secondary;
+
+    &:hover {
+      color: darken($secondary, 10%);
+    }
+  }
+}
+
+@mixin nav() {
+  position: fixed;
+  top: $padding;
+  padding-left: $padding;
+  padding-right: $padding;
+  background-color: $secondary;
+  opacity: 0.7;
+  z-index: 99;
+
+  li {
+    a {
+      font-size: 2em;
+      padding: 0;
+      margin: 0;
+      color: $primary;
+      text-decoration: none;
+      transition: color $hover-transition-time $hover-transition-type;
+
+      &:hover {
+        text-decoration: none;
+        color: darken($primary, 10%);
+      }
+    }
+  }
+}
