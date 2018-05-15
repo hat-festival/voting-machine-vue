@@ -14,8 +14,7 @@ export default {
   mixins: [onClickOutside],
   props: [
     'toggle',
-    'close',
-    'cssClass'
+    'close'
   ]
 }
 </script>
