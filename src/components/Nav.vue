@@ -2,7 +2,7 @@
   <div>
     <Toggle class='nav-toggle' :toggle='toggleNav' :close='closeNav'></Toggle>
     <transition name='fade'>
-      <ul class='nav' id='nav' v-if='show'>
+      <ul class='nav' v-if='show'>
         <li>
           <router-link v-bind:to="'/'">
             Question
@@ -48,12 +48,14 @@ export default {
 .nav {
   @include nav();
   right: $padding * 10;
+  top: $padding;
   text-align: right;
 }
 
 .nav-toggle {
   @include toggle();
   right: $padding * 4;
+  top: $padding * 3;
 }
 
 .fade-enter-active, .fade-leave-active {
@@ -61,11 +63,5 @@ export default {
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
-}
-
-.small-disc {
-  @include disc();
-  width: $btn-diameter * 0.1;
-  height: $btn-diameter * 0.1;
 }
 </style>

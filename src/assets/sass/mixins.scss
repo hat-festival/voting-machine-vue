@@ -32,7 +32,6 @@
   z-index: 99;
   transition: color $hover-transition-time $hover-transition-type;
   position: fixed;
-  top: $padding * 3;
   color: $secondary;
 
   &:hover {
@@ -50,7 +49,6 @@
 
 @mixin nav() {
   position: fixed;
-  top: $padding;
   padding-left: $padding;
   padding-right: $padding;
   background-color: $secondary;
