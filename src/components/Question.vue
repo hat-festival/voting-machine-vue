@@ -3,13 +3,13 @@
     <h2>{{ question.premise }}</h2>
     <div class='columns is-vcentered'>
       <div class='column'>
-        <Button index='0'>{{ question.options[0] }}</Button>
+        <Button value='horses'>{{ question.options['horses'] }}</Button>
       </div>
       <div class='column'>
         <span class='or'>or</span>
       </div>
       <div class='column'>
-        <Button index='1'>{{ question.options[1] }}</Button>
+        <Button value='duck'>{{ question.options['duck'] }}</Button>
       </div>
     </div>
   </div>
@@ -42,13 +42,13 @@ export default {
       .then(response => (
         self.question = response.data
       ))
-  },
-  methods: {
-    vote (choice) {
-      axios.post(endPoint, {
-        choice: choice
-      })
-    }
+  // },
+  // methods: {
+  //   vote (choice) {
+  //     axios.post(endPoint, {
+  //       choice: choice
+  //     })
+  //   }
   }
 }
 </script>

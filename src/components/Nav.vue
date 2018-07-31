@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Toggle class='nav-toggle' :toggle='toggleNav' :close='closeNav'></Toggle>
+    <Toggle class='nav-toggle' :target='this'></Toggle>
     <transition name='fade'>
       <ul class='nav' v-if='show'>
         <li>
@@ -11,6 +11,11 @@
         <li>
           <router-link v-bind:to="'/about'">
             About
+          </router-link>
+        </li>
+        <li>
+          <router-link v-bind:to="'/chain'">
+            Chain
           </router-link>
         </li>
       </ul>
@@ -28,15 +33,8 @@ export default {
   },
   data () {
     return {
-      show: false
-    }
-  },
-  methods: {
-    toggleNav () {
-      this.show = !this.show
-    },
-    closeNav () {
-      this.show = false
+      show: false,
+      icon: 'bars'
     }
   }
 }

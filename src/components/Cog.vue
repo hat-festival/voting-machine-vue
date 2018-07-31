@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Toggle class='cog-toggle' :toggle='toggleCog' :close='closeCog'></Toggle>
+    <Toggle class='cog-toggle' :target='this'></Toggle>
     <transition name='fade'>
       <ul class='cog' v-if='show'>
-        <li v-for='address in  addresses' :key='address'>
-          {{ address }}
+        <li v-for='address in addresses' :key='address'>
+          <code>{{ address }}</code>
         </li>
       </ul>
     </transition>
@@ -23,15 +23,8 @@ export default {
   data () {
     return {
       show: false,
-      addresses: ['0.0.0.0']
-    }
-  },
-  methods: {
-    toggleCog () {
-      this.show = !this.show
-    },
-    closeCog () {
-      this.show = false
+      addresses: ['0.0.0.0'],
+      icon: 'cog'
     }
   },
   mounted () {
@@ -49,15 +42,23 @@ export default {
 
 .cog {
   @include nav();
-  left: $padding * 7;
+  left: $padding * 5;
   bottom: $padding;
+  padding: 0;
   text-align: left;
 }
 
 .cog-toggle {
-  @include toggle();
+  position: fixed;
   left: $padding;
-  bottom: $padding;
+  bottom: 0;
+  a {
+    color: $primary;
+
+    &:hover {
+      color: darken($primary, 10%);
+    }
+  }
 }
 
 .fade-enter-active, .fade-leave-active {

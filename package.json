@@ -21,6 +21,7 @@
     "sass-loader": "^7.0.1",
     "vue": "^2.5.2",
     "vue-awesome": "^3.0.0",
+    "vue-json-pretty": "^1.4.1-beta.1",
     "vue-markdown": "^2.2.4",
     "vue-on-click-outside": "^1.0.3",
     "vue-router": "^3.0.1"

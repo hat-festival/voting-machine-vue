@@ -9,6 +9,7 @@ import { directive as onClickOutside } from 'vue-on-click-outside'
 import App from './App'
 import Question from './components/Question'
 import About from './components/About'
+import Chain from './components/Chain'
 
 Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
@@ -24,6 +25,10 @@ const routes = [
   {
     path: '/about',
     component: About
+  },
+  {
+    path: '/chain',
+    component: Chain
   }
 ]
 

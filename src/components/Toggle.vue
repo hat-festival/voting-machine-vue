@@ -1,7 +1,7 @@
 <template>
   <div>
     <a v-on:click='toggle' v-on-click-outside='close'>
-      <icon name='bars'></icon>
+      <icon :name='this.target.icon'></icon>
     </a>
   </div>
 </template>
@@ -13,8 +13,15 @@ export default {
   name: 'Toggle',
   mixins: [onClickOutside],
   props: [
-    'toggle',
-    'close'
-  ]
+    'target'
+  ],
+  methods: {
+    toggle () {
+      this.target.show = !this.target.show
+    },
+    close () {
+      this.target.show = false
+    }
+  }
 }
 </script>

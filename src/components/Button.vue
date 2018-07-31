@@ -1,6 +1,6 @@
 <template>
   <div class='shake-triggger'>
-    <a class='disc shake-little shake-constant' v-on:click='vote(index)'>
+    <a class='disc shake-little shake-constant' v-on:click='vote(value)'>
       <slot></slot>
     </a>
   </div>
@@ -13,7 +13,7 @@ var endPoint = 'http://localhost:9292/vote'
 export default {
   name: 'Button',
   props: [
-    'index'
+    'value'
   ],
   methods: {
     vote (choice) {
