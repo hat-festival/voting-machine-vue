@@ -10,7 +10,7 @@
 import axios from 'axios'
 import VueJsonPretty from 'vue-json-pretty'
 
-var endPoint = 'http://localhost:9292/chain'
+var endPoint = 'http://localhost:9292/chain?reverse=true'
 export default {
   name: 'Chain',
   components: {
@@ -18,7 +18,7 @@ export default {
   },
   data () {
     return {
-      chain: 'el chain'
+      chain: {}
     }
   },
   mounted () {
@@ -35,5 +35,8 @@ export default {
 @import 'src/assets/sass/custom';
 #chain {
   text-align: left;
+  .vjs__tree {
+    font-family: 'Share Tech Mono';
+  }
 }
 </style>

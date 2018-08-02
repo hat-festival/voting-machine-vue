@@ -9,13 +9,18 @@
           </router-link>
         </li>
         <li>
-          <router-link v-bind:to="'/about'">
-            About
+          <router-link v-bind:to="'/results'">
+            Results
           </router-link>
         </li>
         <li>
           <router-link v-bind:to="'/chain'">
             Chain
+          </router-link>
+        </li>
+        <li>
+          <router-link v-bind:to="'/about'">
+            About
           </router-link>
         </li>
       </ul>
@@ -45,9 +50,26 @@ export default {
 
 .nav {
   @include nav();
-  right: $padding * 10;
+  right: $padding * 12;
   top: $padding;
-  text-align: right;
+  background-color: $primary;
+
+  li {
+    float: left;
+    a {
+      color: $secondary;
+    }
+
+    &:after {
+      content: '::'
+    }
+
+    &:last-child:after {
+      content: ''
+    }
+
+    padding: $padding;
+  }
 }
 
 .nav-toggle {

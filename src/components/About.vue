@@ -26,7 +26,6 @@ export default {
 
 <style lang='scss'>
 @import 'src/assets/sass/custom';
-@import url('//fonts.googleapis.com/css?family=Share+Tech+Mono');
 
 h3 {
   font-size: 1.5em;

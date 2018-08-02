@@ -10,6 +10,7 @@ import App from './App'
 import Question from './components/Question'
 import About from './components/About'
 import Chain from './components/Chain'
+import Results from './components/Results'
 
 Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
@@ -29,6 +30,10 @@ const routes = [
   {
     path: '/chain',
     component: Chain
+  },
+  {
+    path: '/Results',
+    component: Results
   }
 ]
 
