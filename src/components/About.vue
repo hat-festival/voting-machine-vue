@@ -35,14 +35,18 @@ h4 {
   font-size: 1.3em;
 }
 
-p, ul {
+p {
   text-align: justify;
   width: 80%;
   margin: auto;
   font-size: 1.2em;
+  margin-bottom: $padding * 3;
 }
 
-ul {
+#about > div > ul {
+  width: 80%;
+  text-align: justify;
+  margin: auto;
   list-style-type: circle;
   padding-left: $padding * 6;
 }
