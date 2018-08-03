@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Buefy from 'buefy'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+
 import 'buefy/lib/buefy.css'
 import 'vue-awesome/icons'
 import 'csshake'
@@ -14,9 +17,12 @@ import Results from './components/Results'
 
 Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
+Vue.use(VueChartkick, {adapter: Chart})
 
 Vue.component('icon', Icon)
 Vue.directive('on-click-outside', onClickOutside)
+
+Chart.defaults.global.legend.fontFamily = 'Amatic SC'
 
 const routes = [
   {

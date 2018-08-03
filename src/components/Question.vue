@@ -42,13 +42,6 @@ export default {
       .then(response => (
         self.question = response.data
       ))
-  // },
-  // methods: {
-  //   vote (choice) {
-  //     axios.post(endPoint, {
-  //       choice: choice
-  //     })
-  //   }
   }
 }
 </script>
