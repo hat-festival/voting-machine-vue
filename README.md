@@ -10,29 +10,27 @@ We have set out to answer this once and for all, in the most ridiculous way we c
 
 ### REST API
 
-There's a simple [Sinatra](//sinatrarb.com/) [JSON API](//github.com/hat-festival/voting-machine) which exposes a `GET` endpoint for the question data, and a `POST` endpoint which collects the votes and shovels them onto a [Sidekiq](//sidekiq.org/) queue. Sidekiq requires [Redis](//redis.io/), and the easiest way to run a Redis server is using
+There's a simple [Sinatra](//sinatrarb.com/) [JSON API](//github.com/hat-festival/voting-machine) which exposes (amongst other things)
+
+* a `GET` endpoint for the question data
+* a `POST` endpoint which collects the votes, and
+* a `PATCH` endpoint to adjust the difficulty of the Equestreum blockchain (see below)
+
+The votes are shovelled onto a [Sidekiq](//sidekiq.org/) queue - Sidekiq requires [Redis](//redis.io/), and the easiest way to run a Redis server is using
 
 ---
 
 ### Docker
 
-There is a [docker-compose.yml](https://docs.docker.com/compose/) file which launches a Redis Docker container to support the Sidekiq queue. Attempts were made to manage this with [Kubernetes](//kubernetes.io) but it turns out it's quite tricky to run a single-node Raspberrry Pi k8s cluster
+There is a [docker-compose.yml](//docs.docker.com/compose/) file which launches a Redis Docker container to support the Sidekiq queue. Attempts were made to manage this with [Kubernetes](//kubernetes.io) but it turns out it's quite tricky to run a single-node Raspberry Pi k8s cluster
 
 ---
 
 ### Blockchain
 
-All these votes backing-up on the Sidekiq queue need to go somewhere, and where better in 2018 than onto a [Blockchain](//yukimotopress.github.io/programming-blockchains-step-by-step)?
+The votes are plucked off of the Sidekiq queue and added to the [Equestreum](//github.com/hat-festival/equestreum) blockchain. A new block is mined for each vote, and the API sports `GET` endpoints that give the aggregate voting data as well as exposing the entire chain
 
-We've not actually implemented this yet but we are planning an ICO for later in the year
-
----
-
-### Bothan
-
-When we worked at the [Open Data Institute](//theodi.org), we built a tool called [Bothan](//bothan.io). This is the obvious choice for visualising the votes stored in the Blockchain
-
-This requires [MongoDB](//mongodb.com), which will also be run in a Docker container
+There are currently no fucking cryptocoins being mined here, but it's surely only a matter of time before our big ICO
 
 ---
 
