@@ -1,17 +1,20 @@
 <template>
   <div id='about'>
     <vue-markdown :source='markdown' :prerender='prerender'></vue-markdown>
+    <Addresses></Addresses>
   </div>
 </template>
 
 <script>
 import VueMarkdown from 'vue-markdown'
 import readme from '../../README.md'
+import Addresses from './Addresses'
 
 export default {
   name: 'about',
   components: {
-    VueMarkdown
+    VueMarkdown,
+    Addresses
   },
   data () {
     return {
@@ -60,7 +63,7 @@ a {
 code {
   font-family: 'Share Tech Mono';
   background-color: transparent;
-  font-size: 1.2em;
+  font-size: 1em;
   margin: 0;
   padding: 0;
 }

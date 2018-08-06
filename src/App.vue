@@ -1,7 +1,6 @@
 <template>
   <div id='app'>
     <Nav></Nav>
-    <Cog></Cog>
     <h1>Voting Machine</h1>
     <hr>
     <transition name='page' mode='out-in'>
@@ -12,13 +11,11 @@
 
 <script>
 import Nav from './components/Nav'
-import Cog from './components/Cog'
 
 export default {
   name: 'App',
   components: {
-    Nav,
-    Cog
+    Nav
   }
 }
 </script>
