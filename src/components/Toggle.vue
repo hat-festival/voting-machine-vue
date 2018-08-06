@@ -18,9 +18,11 @@ export default {
   methods: {
     toggle () {
       this.target.show = !this.target.show
+      this.$root.$emit('title-' + !this.target.show)
     },
     close () {
       this.target.show = false
+      this.$root.$emit('title-true')
     }
   }
 }

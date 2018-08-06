@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
     <Nav></Nav>
-    <h1>Voting Machine</h1>
+    <Title></Title>
     <hr>
     <transition name='page' mode='out-in'>
       <router-view></router-view>
@@ -11,11 +11,13 @@
 
 <script>
 import Nav from './components/Nav'
+import Title from './components/Title'
 
 export default {
   name: 'App',
   components: {
-    Nav
+    Nav,
+    Title
   }
 }
 </script>
