@@ -1,8 +1,6 @@
 <template>
   <div id='app'>
     <Nav></Nav>
-    <Title></Title>
-    <hr>
     <transition name='page' mode='out-in'>
       <router-view></router-view>
     </transition>
@@ -11,13 +9,11 @@
 
 <script>
 import Nav from './components/Nav'
-import Title from './components/Title'
 
 export default {
   name: 'App',
   components: {
-    Nav,
-    Title
+    Nav
   }
 }
 </script>
@@ -36,6 +32,7 @@ body {
   text-align: center;
   color: $primary;
   overflow: hidden;
+  margin-top: 70px;
 }
 
 h1 {
