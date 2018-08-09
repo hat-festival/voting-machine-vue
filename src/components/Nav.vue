@@ -5,14 +5,14 @@
         <icon name='bars'></icon>
       </a>
       <transition name='title-anim'>
-        <h1 v-if='title'>
+        <h1 v-if='this.$store.state.title'>
           <router-link to='/'>Voting Machine</router-link>
         </h1>
       </transition>
       <hr>
       <div class='tabs is-centered'>
         <transition name='tabs-anim'>
-          <ul v-if='menu'>
+          <ul v-if='this.$store.state.menu'>
             <li>
               <router-link v-bind:to="'/'">
                 Question
@@ -54,12 +54,10 @@ export default {
   },
   methods: {
     toggle () {
-      this.title = !this.title
-      this.menu = !this.menu
+      this.$store.commit('toggle')
     },
     close () {
-      this.title = true
-      this.menu = false
+      this.$store.commit('showTitle')
     }
   }
 }
