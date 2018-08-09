@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Nav from './components/Nav'
+import Nav from './components/lego/Nav'
 
 export default {
   name: 'App',
@@ -35,6 +35,10 @@ body {
   margin-top: 70px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 h1 {
   font-size: 3em;
 }
@@ -53,13 +57,6 @@ hr {
   height: 1px;
   background-image: linear-gradient(to right, $secondary, $primary, $secondary);
 }
-
-// .fade-enter-active, .fade-leave-active {
-//   transition: opacity .5s;
-// }
-// .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-//   opacity: 0;
-// }
 
 .page-enter-active, .page-leave-active {
   transition: opacity 1s, transform 1s;

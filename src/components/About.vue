@@ -8,7 +8,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import readme from '../../README.md'
-import Addresses from './Addresses'
+import Addresses from './lego/Addresses'
 
 export default {
   name: 'about',
@@ -46,7 +46,7 @@ p {
   margin-bottom: $padding * 3;
 }
 
-#about > div > ul {
+ul {
   width: 80%;
   text-align: justify;
   margin: auto;
