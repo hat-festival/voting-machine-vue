@@ -4,36 +4,38 @@
       <a class='nav-toggle' v-on:click='toggle' v-on-click-outside='close'>
         <icon name='bars'></icon>
       </a>
-      <transition name='scoot'>
-        <h1 v-if='scoot'>
+      <transition name='title-anim'>
+        <h1 v-if='title'>
           <router-link to='/'>Voting Machine</router-link>
         </h1>
       </transition>
       <hr>
-      <transition name='menu'>
-        <ul v-if='menu' class='nav'>
-          <li>
-            <router-link v-bind:to="'/'">
-              Question
-            </router-link>
-          </li>
-          <li>
-            <router-link v-bind:to="'/results'">
-              Results
-            </router-link>
-          </li>
-          <li>
-            <router-link v-bind:to="'/chain'">
-              Chain
-            </router-link>
-          </li>
-          <li>
-            <router-link v-bind:to="'/about'">
-              About
-            </router-link>
-          </li>
-        </ul>
-      </transition>
+      <div class='tabs is-centered'>
+        <transition name='tabs-anim'>
+          <ul v-if='menu'>
+            <li>
+              <router-link v-bind:to="'/'">
+                Question
+              </router-link>
+            </li>
+            <li>
+              <router-link v-bind:to="'/results'">
+                Results
+              </router-link>
+            </li>
+            <li>
+              <router-link v-bind:to="'/chain'">
+                Chain
+              </router-link>
+            </li>
+            <li>
+              <router-link v-bind:to="'/about'">
+                About
+              </router-link>
+            </li>
+          </ul>
+        </transition>
+      </div>
     </div>
   </div>
 </template>
@@ -47,16 +49,16 @@ export default {
   data () {
     return {
       menu: false,
-      scoot: true
+      title: true
     }
   },
   methods: {
     toggle () {
-      this.scoot = !this.scoot
+      this.title = !this.title
       this.menu = !this.menu
     },
     close () {
-      this.scoot = true
+      this.title = true
       this.menu = false
     }
   }
@@ -108,53 +110,35 @@ h1 {
   margin: auto;
 }
 
-.nav {
-  position: absolute;
-  top: 0;
-  right: 600px;
-}
-
-.scoot-enter-active,
-.scoot-leave-active,
-.menu-enter-active,
-.menu-leave-active
+.title-anim-enter-active,
+.title-anim-leave-active,
+.tabs-anim-enter-active,
+.tabs-anim-leave-active
 {
   transition: transform 1s;
 }
 
-.scoot-enter, .scoot-leave-to {
-  transform: translateX(-600px);
+.title-anim-enter-to,
+.title-anim.leave,
+.tabs-anim-enter-to,
+.tabs-anim.leave
+{
+  transform: translateX(0);
 }
 
-.scoot-enter-to, .scoot.leave {
-    transform: translateX(000px);
+.title-anim-enter,
+.title-anim-leave-to
+{
+  transform: translateX(-$translate-distance);
 }
 
-.menu-enter, .menu-leave-to {
-  transform: translateX(600px);
+.tabs-anim-enter,
+.tabs-anim-leave-to
+{
+  transform: translateX($translate-distance);
 }
 
-.menu-enter-to, .menu.leave {
-    transform: translateX(000px);
-}
-
-.nav {
+.tabs {
   font-size: 2em;
-  right: $padding * 12;
-  top: $padding;
-  li {
-    float: left;
-    a {
-      color: $primary;
-    }
-    &:after {
-      content: '::'
-    }
-    &:last-child:after {
-      content: ''
-    }
-    padding: $padding;
-  }
 }
-
 </style>
