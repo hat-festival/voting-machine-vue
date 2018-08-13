@@ -10,9 +10,9 @@
       We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far too many layers:
     </p>
     <hr>
-    <ApiReadme></ApiReadme>
+    <Readme title='API' endPoint='http://localhost:9292/readme'></Readme>
     <hr>
-    <EquestreumReadme></EquestreumReadme>
+    <Readme title='Equestreum Blockchain' endPoint='http://localhost:9292/readme?gem=equestreum'></Readme>
     <hr>
     <Addresses></Addresses>
   </div>
@@ -20,16 +20,12 @@
 
 <script>
 import Addresses from './lego/Addresses'
-// import FrontendReadme from './readmes/Frontend'
-import ApiReadme from './readmes/Api'
-import EquestreumReadme from './readmes/Equestreum'
+import Readme from './lego/Readme'
 
 export default {
   name: 'About',
   components: {
-    // FrontendReadme,
-    ApiReadme,
-    EquestreumReadme,
+    Readme,
     Addresses
   }
 }
