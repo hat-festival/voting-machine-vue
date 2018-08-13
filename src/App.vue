@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Amatic SC';
+  font-family: $default-font, monospace;
   width: 90%;
   margin: auto;
   text-align: center;

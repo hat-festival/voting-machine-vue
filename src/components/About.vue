@@ -1,28 +1,32 @@
 <template>
   <div id='about'>
-    <vue-markdown :source='markdown' :prerender='prerender'></vue-markdown>
+    <h1>Over-engineering at its absolute finest</h1>
+
+    <p>
+      Since the dawn of history, one question has troubled the minds of the greatest thinkers: Would you rather fight one hundred duck-sized horses, or one horse-sized duck?
+    </p>
+
+    <p>
+      We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far too many layers:
+    </p>
+    <hr>
+    <ApiReadme></ApiReadme>
+    <hr>
     <Addresses></Addresses>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
-import readme from '../../README.md'
 import Addresses from './lego/Addresses'
+import FrontendReadme from './readmes/Frontend'
+import ApiReadme from './readmes/Api'
 
 export default {
-  name: 'about',
+  name: 'About',
   components: {
-    VueMarkdown,
+    FrontendReadme,
+    ApiReadme,
     Addresses
-  },
-  data () {
-    return {
-      markdown: readme,
-      prerender: function () {
-        return readme.substring(readme.indexOf('\n') + 1)
-      }
-    }
   }
 }
 </script>
@@ -61,10 +65,18 @@ a {
 }
 
 code {
-  font-family: 'Share Tech Mono';
+  font-family: $mono-font;
   background-color: transparent;
   font-size: 1em;
   margin: 0;
   padding: 0;
+}
+
+pre {
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  background-color: transparent;
+  color: $orange;
 }
 </style>
