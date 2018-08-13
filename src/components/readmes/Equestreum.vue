@@ -1,9 +1,9 @@
 <template>
-  <div id='api-readme'>
-    <h2>API <a @click="toggleShow" href='#'>
-      <icon :name="showApi ? 'angle-double-up' : 'angle-double-down'"></icon>
+  <div id='equestreum-readme'>
+    <h2>Equestreum Blockchain <a @click="toggleShow" href='#'>
+      <icon :name="showEquestreum ? 'angle-double-up' : 'angle-double-down'"></icon>
     </a></h2>
-    <div v-show-slide:400:ease-in-out='showApi'>
+    <div v-show-slide:400:ease-in-out='showEquestreum'>
       <vue-markdown :source='readme'></vue-markdown>
       <a @click="toggleShow" href='#'>
         <icon name='angle-double-up'></icon>
@@ -15,22 +15,22 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import axios from 'axios'
-var endPoint = 'http://localhost:9292/readme'
+var endPoint = 'http://localhost:9292/readme?gem=equestreum'
 
 export default {
-  name: 'ApiReadme',
+  name: 'EquestreumReadme',
   components: {
     VueMarkdown
   },
   data () {
     return {
       readme: '',
-      showApi: false
+      showEquestreum: false
     }
   },
   methods: {
     toggleShow () {
-      this.showApi = !this.showApi
+      this.showEquestreum = !this.showEquestreum
     }
   },
   mounted () {

@@ -12,20 +12,24 @@
     <hr>
     <ApiReadme></ApiReadme>
     <hr>
+    <EquestreumReadme></EquestreumReadme>
+    <hr>
     <Addresses></Addresses>
   </div>
 </template>
 
 <script>
 import Addresses from './lego/Addresses'
-import FrontendReadme from './readmes/Frontend'
+// import FrontendReadme from './readmes/Frontend'
 import ApiReadme from './readmes/Api'
+import EquestreumReadme from './readmes/Equestreum'
 
 export default {
   name: 'About',
   components: {
-    FrontendReadme,
+    // FrontendReadme,
     ApiReadme,
+    EquestreumReadme,
     Addresses
   }
 }

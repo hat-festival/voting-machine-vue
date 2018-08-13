@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import Buefy from 'buefy'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
+import VShowSlide from 'v-show-slide'
 
 import 'buefy/lib/buefy.css'
 import 'vue-awesome/icons'
@@ -20,6 +21,7 @@ Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
 Vue.use(Vuex)
 Vue.use(VueChartkick, {adapter: Chart})
+Vue.use(VShowSlide)
 
 Vue.component('icon', Icon)
 Vue.directive('on-click-outside', onClickOutside)
