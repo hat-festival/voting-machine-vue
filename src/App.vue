@@ -1,8 +1,6 @@
 <template>
   <div id='app'>
     <Nav></Nav>
-    <Title></Title>
-    <hr>
     <transition name='page' mode='out-in'>
       <router-view></router-view>
     </transition>
@@ -10,14 +8,12 @@
 </template>
 
 <script>
-import Nav from './components/Nav'
-import Title from './components/Title'
+import Nav from './components/lego/Nav'
 
 export default {
   name: 'App',
   components: {
-    Nav,
-    Title
+    Nav
   }
 }
 </script>
@@ -30,12 +26,17 @@ html {
 }
 
 body {
-  font-family: 'Amatic SC';
+  font-family: $default-font, monospace;
   width: 90%;
   margin: auto;
   text-align: center;
   color: $primary;
   overflow: hidden;
+  margin-top: 70px;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 h1 {
@@ -55,13 +56,6 @@ hr {
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, $secondary, $primary, $secondary);
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
 }
 
 .page-enter-active, .page-leave-active {

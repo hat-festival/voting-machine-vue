@@ -1,6 +1,6 @@
 <template>
   <div id='pie'>
-    <h2>People would rather fight</h2>
+    <h2>EMF Camp 2018 would rather fight</h2>
     <pie-chart :data='results'
       :colors="['#f44242', '#f49b42']"
       ></pie-chart>
@@ -13,7 +13,8 @@ import Chart from 'chart.js'
 
 Chart.defaults.pie.cutoutPercentage = 5
 Chart.defaults.global.legend.position = 'right'
-Chart.defaults.global.legend.labels.fontFamily = 'Amatic SC'
+// Chart.defaults.global.legend.labels.fontFamily = 'Amatic SC'
+Chart.defaults.global.legend.labels.fontFamily = 'Kirang Haerang'
 Chart.defaults.global.legend.labels.fontSize = 24
 Chart.defaults.global.elements.arc.borderWidth = 5
 Chart.defaults.global.elements.arc.borderColor = 'rgb(243, 239, 224)'

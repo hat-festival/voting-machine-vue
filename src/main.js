@@ -1,8 +1,10 @@
 import Vue from 'vue'
+import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import Buefy from 'buefy'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
+import VShowSlide from 'v-show-slide'
 
 import 'buefy/lib/buefy.css'
 import 'vue-awesome/icons'
@@ -17,12 +19,31 @@ import Results from './components/Results'
 
 Vue.use(Buefy, { defaultIconPack: 'fa' })
 Vue.use(VueRouter)
+Vue.use(Vuex)
 Vue.use(VueChartkick, {adapter: Chart})
+Vue.use(VShowSlide)
 
 Vue.component('icon', Icon)
 Vue.directive('on-click-outside', onClickOutside)
 
 Chart.defaults.global.legend.fontFamily = 'Amatic SC'
+
+const store = new Vuex.Store({
+  state: {
+    title: true,
+    menu: false
+  },
+  mutations: {
+    toggle (state) {
+      state.title = !state.title
+      state.menu = !state.menu
+    },
+    showTitle (state) {
+      state.title = true
+      state.menu = false
+    }
+  }
+})
 
 const routes = [
   {
@@ -53,5 +74,6 @@ new Vue({
   el: '#app',
   components: { App },
   template: '<App/>',
-  router
+  router,
+  store
 }).$mount('#app')

@@ -1,6 +1,11 @@
-@import url('//fonts.googleapis.com/css?family=Amatic+SC');
+// @import url('//fonts.googleapis.com/css?family=Amatic+SC');
+@import url('//fonts.googleapis.com/css?family=Kirang+Haerang');
+// @import url('//fonts.googleapis.com/css?family=Gloria+Hallelujah');
+// @import url('//fonts.googleapis.com/css?family=Permanent+Marker');
+$default-font: 'Kirang Haerang';
+
 @import url('//fonts.googleapis.com/css?family=Share+Tech+Mono');
-@import url('//fonts.googleapis.com/css?family=Space+Mono');
+$mono-font: 'Share Tech Mono';
 
 $ecru: rgb(243, 239, 224);
 $red: rgb(244, 66, 66);
@@ -10,7 +15,7 @@ $primary: $red;
 $complementary: $orange;
 $secondary: $ecru;
 
-$link-colour: darken($primary, 20%);
+$link-colour: darken($primary, 10%);
 
 $btn-diameter: 300px;
 $hover-transition-time: 0.5s;
@@ -19,4 +24,7 @@ $hover-transition-type: ease;
 $footer-height: 40px;
 $padding: 5px;
 
-@import './mixins';
+$tabs-border-bottom-style: none;
+$tabs-link-color: $link-colour;
+
+$translate-distance: 700px;

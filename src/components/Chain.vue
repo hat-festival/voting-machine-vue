@@ -36,7 +36,7 @@ export default {
 #chain {
   text-align: left;
   .vjs__tree {
-    font-family: 'Share Tech Mono';
+    font-family: $mono-font;
   }
 }
 </style>

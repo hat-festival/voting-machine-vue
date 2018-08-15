@@ -17,7 +17,7 @@
 
 <script>
 import axios from 'axios'
-import Button from './Button'
+import Button from './lego/Button'
 
 var endPoint = 'http://localhost:9292/question'
 export default {
@@ -45,11 +45,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss'>
-@import 'src/assets/sass/custom';
-
-.disc {
-  @include disc();
-}
-</style>
