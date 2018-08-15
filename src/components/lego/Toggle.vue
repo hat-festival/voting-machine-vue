@@ -1,6 +1,6 @@
 <template>
   <a class='nav-toggle' v-on:click='toggle' v-on-click-outside='close'>
-    <icon name='bars'></icon>
+    <icon :name="this.$store.state.title ? 'angle-double-left' : 'angle-double-right'"></icon>
   </a>
 </template>
 

@@ -1,20 +1,12 @@
 <template>
   <div>
-    <h2>{{ title }} <a @click="toggle" href='#'>
-      <icon :name="show ? 'angle-double-up' : 'angle-double-down'"></icon>
-    </a></h2>
-    <div v-show-slide:400:ease-in-out='show'>
-      <vue-markdown :source='readme'></vue-markdown>
-      <a @click="toggle" href='#'>
-        <icon name='angle-double-up'></icon>
-      </a>
-    </div>
+    <Foldable :title='title' :content='readme' type='markdown'></Foldable>
   </div>
 </template>
 
 <script>
-import VueMarkdown from 'vue-markdown'
 import axios from 'axios'
+import Foldable from './Foldable'
 
 export default {
   name: 'Readme',
@@ -23,7 +15,7 @@ export default {
     'endPoint'
   ],
   components: {
-    VueMarkdown
+    Foldable
   },
   data () {
     return {

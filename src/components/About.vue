@@ -1,5 +1,6 @@
 <template>
   <div id='about'>
+    THIS NEEDS THE DOCKER SECTION TOO
     <h1>Over-engineering at its absolute finest</h1>
 
     <p>
