@@ -1,6 +1,5 @@
 <template>
   <div id='about'>
-    THIS NEEDS THE DOCKER SECTION TOO
     <h1>Over-engineering at its absolute finest</h1>
 
     <p>
@@ -11,22 +10,27 @@
       We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far too many layers:
     </p>
     <hr>
-    <Readme title='API' endPoint='http://localhost:9292/readme'></Readme>
+    <Readme title='JSON API' endPoint='http://localhost:9292/readme'></Readme>
+    <hr>
+    <Docker></Docker>
     <hr>
     <Readme title='Equestreum Blockchain' endPoint='http://localhost:9292/readme?gem=equestreum'></Readme>
     <hr>
     <Addresses></Addresses>
+    <hr>
   </div>
 </template>
 
 <script>
-import Addresses from './lego/Addresses'
 import Readme from './lego/Readme'
+import Docker from './lego/Docker'
+import Addresses from './lego/Addresses'
 
 export default {
   name: 'About',
   components: {
     Readme,
+    Docker,
     Addresses
   }
 }

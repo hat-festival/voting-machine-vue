@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Foldable title='Addresses' :content='addresses' type='text'></Foldable>
+    <Foldable title='*' :content='addresses' type='text'></Foldable>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
     var self = this
     axios.get('http://localhost:9292/addresses')
       .then(response => (
-        self.addresses = response.data['addresses'].join(', ')
+        self.addresses = 'Address(es) of this Pi: ' + response.data['addresses'].join(', ')
       ))
   }
 }
