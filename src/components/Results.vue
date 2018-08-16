@@ -16,6 +16,7 @@ Chart.defaults.pie.cutoutPercentage = 5
 Chart.defaults.global.legend.position = 'right'
 Chart.defaults.global.legend.labels.fontSize = 24
 Chart.defaults.global.elements.arc.borderWidth = 5
+Chart.defaults.global.tooltips.enabled = false
 
 export default {
   name: 'Results',
@@ -25,7 +26,7 @@ export default {
         duck: 1,
         horses: 1
       },
-      colours: ['#f44242', '#f49b42']
+      colours: []
     }
   },
   mounted () {
@@ -39,6 +40,7 @@ export default {
     Chart.defaults.global.elements.arc.borderColor = style.getPropertyValue('--colour-secondary')
     Chart.defaults.global.legend.labels.fontFamily = style.getPropertyValue('--font-default')
     Chart.defaults.global.legend.labels.fontColor = style.getPropertyValue('--colour-complementary')
+
     self.colours = [
       style.getPropertyValue('--colour-primary'),
       style.getPropertyValue('--colour-complementary')
@@ -46,7 +48,3 @@ export default {
   }
 }
 </script>
-
-<style lang='scss'>
-// @import 'src/assets/sass/custom';
-</style>

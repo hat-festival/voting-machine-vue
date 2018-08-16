@@ -1,24 +1,25 @@
 // @import url('//fonts.googleapis.com/css?family=Amatic+SC');
-@import url('//fonts.googleapis.com/css?family=Kirang+Haerang');
 // @import url('//fonts.googleapis.com/css?family=Gloria+Hallelujah');
 // @import url('//fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('//fonts.googleapis.com/css?family=Kirang+Haerang');
 $default-font: 'Kirang Haerang';
 
 @import url('//fonts.googleapis.com/css?family=Share+Tech+Mono');
 $mono-font: 'Share Tech Mono';
 
-$ecru: rgb(243, 239, 224);
 $red: rgb(244, 66, 66);
+$ecru: rgb(243, 239, 224);
 $orange: rgb(244, 155, 66);
 
 $primary: $red;
 $secondary: $ecru;
 $complementary: $orange;
 
+// this fuckery is required by Chart.js
 :root {
-  --colour-primary: rgb(244, 66, 66);
-  --colour-secondary: rgb(243, 239, 224);
-  --colour-complementary: rgb(244, 155, 66);
+  --colour-primary: rgb(244, 66, 66); // red
+  --colour-secondary: rgb(243, 239, 224); // ecru
+  --colour-complementary: rgb(244, 155, 66); // orange
   --font-default: 'Kirang Haerang';
 }
 
