@@ -17,7 +17,6 @@
     <Readme title='Equestreum Blockchain' endPoint='http://localhost:9292/readme?gem=equestreum'></Readme>
     <hr>
     <Addresses></Addresses>
-    <hr>
   </div>
 </template>
 
@@ -82,6 +81,6 @@ pre {
   width: 80%;
   margin: auto;
   background-color: transparent;
-  color: $orange;
+  color: $complementary;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Foldable title='*' :content='addresses' type='text'></Foldable>
+    <Foldable title='' :content='addresses' type='text'></Foldable>
   </div>
 </template>
 
