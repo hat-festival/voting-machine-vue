@@ -82,6 +82,6 @@ pre {
   width: 80%;
   margin: auto;
   background-color: transparent;
-  color: $orange;
+  color: $complementary;
 }
 </style>

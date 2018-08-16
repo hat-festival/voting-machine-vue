@@ -12,8 +12,15 @@ $red: rgb(244, 66, 66);
 $orange: rgb(244, 155, 66);
 
 $primary: $red;
-$complementary: $orange;
 $secondary: $ecru;
+$complementary: $orange;
+
+:root {
+  --colour-primary: rgb(244, 66, 66);
+  --colour-secondary: rgb(243, 239, 224);
+  --colour-complementary: rgb(244, 155, 66);
+  --font-default: 'Kirang Haerang';
+}
 
 $link-colour: darken($primary, 10%);
 
