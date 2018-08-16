@@ -16,7 +16,6 @@ Chart.defaults.pie.cutoutPercentage = 5
 Chart.defaults.global.legend.position = 'right'
 Chart.defaults.global.legend.labels.fontSize = 24
 Chart.defaults.global.elements.arc.borderWidth = 5
-Chart.defaults.global.tooltips.enabled = false
 
 export default {
   name: 'Results',

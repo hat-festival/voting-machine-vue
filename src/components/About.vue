@@ -17,7 +17,6 @@
     <Readme title='Equestreum Blockchain' endPoint='http://localhost:9292/readme?gem=equestreum'></Readme>
     <hr>
     <Addresses></Addresses>
-    <hr>
   </div>
 </template>
 
