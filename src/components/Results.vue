@@ -38,7 +38,7 @@ export default {
     var style = getComputedStyle(document.body)
     Chart.defaults.global.elements.arc.borderColor = style.getPropertyValue('--colour-secondary')
     Chart.defaults.global.legend.labels.fontFamily = style.getPropertyValue('--font-default')
-    Chart.defaults.global.legend.labels.fontColor = style.getPropertyValue('--colour-complementary')
+    // Chart.defaults.global.legend.labels.fontColor = style.getPropertyValue('--colour-complementary')
 
     self.colours = [
       style.getPropertyValue('--colour-primary'),

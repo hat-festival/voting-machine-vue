@@ -1,36 +1,25 @@
 <template>
   <div id='about'>
-    <h1>Over-engineering at its absolute finest</h1>
-
-    <p>
-      Since the dawn of history, one question has troubled the minds of the greatest thinkers: Would you rather fight one hundred duck-sized horses, or one horse-sized duck?
-    </p>
-
-    <p>
-      We have set out to answer this once and for all, in the most ridiculous way we could think of. It has far, far too many layers:
-    </p>
-    <hr>
-    <Readme title='JSON API' endPoint='http://localhost:9292/readme'></Readme>
-    <hr>
-    <Docker></Docker>
-    <hr>
-    <Readme title='Equestreum Blockchain' endPoint='http://localhost:9292/readme?gem=equestreum'></Readme>
-    <hr>
-    <Addresses></Addresses>
+    <vue-markdown :source='markdown' :prerender='prerender'></vue-markdown>
   </div>
 </template>
 
 <script>
-import Readme from './lego/Readme'
-import Docker from './lego/Docker'
-import Addresses from './lego/Addresses'
+import VueMarkdown from 'vue-markdown'
+import readme from '../../README.md'
 
 export default {
-  name: 'About',
+  name: 'about',
   components: {
-    Readme,
-    Docker,
-    Addresses
+    VueMarkdown
+  },
+  data () {
+    return {
+      markdown: readme,
+      prerender: function () {
+        return readme.substring(readme.indexOf('\n') + 1)
+      }
+    }
   }
 }
 </script>
@@ -54,7 +43,7 @@ p {
   margin-bottom: $padding * 3;
 }
 
-ul {
+#about > div > ul {
   width: 80%;
   text-align: justify;
   margin: auto;
@@ -69,18 +58,10 @@ a {
 }
 
 code {
-  font-family: $mono-font;
+  font-family: 'Share Tech Mono';
   background-color: transparent;
   font-size: 1em;
   margin: 0;
   padding: 0;
-}
-
-pre {
-  text-align: left;
-  width: 80%;
-  margin: auto;
-  background-color: transparent;
-  color: $complementary;
 }
 </style>
