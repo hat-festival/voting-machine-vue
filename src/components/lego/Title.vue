@@ -1,7 +1,7 @@
 <template>
   <transition name='title-anim'>
-    <h1 v-if='this.$store.state.title' v-html='smudgeText ("Voting Machine")'>
-      <router-link to='/'></router-link>
+    <h1 v-if='this.$store.state.title'>
+      <router-link to='/' v-html='smudgeText ("Voting Machine")'></router-link>
     </h1>
   </transition>
 </template>

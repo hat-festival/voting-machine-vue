@@ -43,32 +43,6 @@ export default {
 <style lang='scss'>
 @import 'src/assets/sass/custom';
 
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  background-color: $secondary;
-  opacity: 0.9;
-  height: 70px;
-  z-index: 90;
-
-  hr {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 80%;
-  }
-
-  a {
-    text-decoration: none;
-    color: $link-colour;
-  }
-}
-
 .title-anim-enter-active,
 .title-anim-leave-active,
 .tabs-anim-enter-active,
