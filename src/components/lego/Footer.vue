@@ -2,10 +2,11 @@
   <div>
     <div id='footer'>
       <hr>
-      Follow the results
+      Follow
       <!-- <a @click="toggleModal" href='#'> -->
-        @horses_v_ducks
+        @horses_v_ducks (Mastodon and Twitter)
       <!-- </a> -->
+      for the latest updates
     </div>
 
     <div class="modal is-active animated fadeIn" v-if='showModal'>
@@ -44,9 +45,5 @@ export default {
 
 .modal {
   z-index: 99;
-}
-
-.timeline-Tweet-text {
-  font-family: $default-font;
 }
 </style>
