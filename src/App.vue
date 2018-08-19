@@ -35,7 +35,8 @@ body {
   text-align: center;
   color: $primary;
   overflow: hidden;
-  margin-top: 70px;
+  margin-top: $header-height;
+  margin-bottom: $footer-height;
 }
 
 ::-webkit-scrollbar {
@@ -94,7 +95,7 @@ hr {
 
 #header {
   top: 0;
-  height: 70px;
+  height: $header-height;
 
   hr {
     bottom: 0;
@@ -103,7 +104,7 @@ hr {
 
 #footer {
   bottom: 0;
-  height: 25px;
+  height: $footer-height;
 
   hr {
     top: 0;

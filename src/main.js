@@ -5,6 +5,7 @@ import Buefy from 'buefy'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
 import VShowSlide from 'v-show-slide'
+// import Timeline from 'vue-tweet-embed/timeline'
 
 import 'buefy/lib/buefy.css'
 import 'vue-awesome/icons'
